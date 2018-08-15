@@ -1,9 +1,6 @@
 import React from 'react';
 import '../assets/App.css';
 
-
-
-
 export default class TodosListItem extends React.Component {
 
     constructor(props) {
@@ -14,7 +11,15 @@ export default class TodosListItem extends React.Component {
         };
     }
 
+    renderTasksSection() {
+
+        return this.props.isCompleted ?
+            <td className="Task-isCompleted-true">{this.props.task}</td> :
+            <td className="Task-isCompleted-false">{this.props.task}</td>;
+    }
+
     renderActionsSection() {
+
         if (this.state.isEditing) {
             return (
                 <td>
@@ -34,7 +39,7 @@ export default class TodosListItem extends React.Component {
     render() {
         return (
             <tr>
-                <td>{this.props.task}</td>
+                {this.renderTasksSection()}
                 {this.renderActionsSection()}
             </tr>
         );
