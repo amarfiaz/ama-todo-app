@@ -12,14 +12,12 @@ export default class TodosListItem extends React.Component {
     }
 
     renderTasksSection() {
-
         return this.props.isCompleted ?
-            <td className="Task-isCompleted-true">{this.props.task}</td> :
-            <td className="Task-isCompleted-false">{this.props.task}</td>;
+            <td className="Task-isCompleted-true" onClick={this.props.toggleTask.bind(this, this.props.task)}>{this.props.task}</td> :
+            <td className="Task-isCompleted-false" onClick={this.props.toggleTask.bind(this, this.props.task)}>{this.props.task}</td>;
     }
 
     renderActionsSection() {
-
         if (this.state.isEditing) {
             return (
                 <td>

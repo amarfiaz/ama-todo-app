@@ -23,12 +23,13 @@
 }
 
 .Task-isCompleted-true {
-  color: green;
+  color: red;
   cursor: pointer;
+  text-decoration: line-through;
 }
 
 .Task-isCompleted-false {
-  color: red;
+  color: green;
   cursor: pointer;
 }
 
