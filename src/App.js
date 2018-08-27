@@ -31,6 +31,7 @@ export default class App extends React.Component {
                 <TodosList
                     todos={this.state.todos}
                     toggleTask={this.toggleTask.bind(this)}
+                    deleteTask={this.deleteTask.bind(this)}
                 />
             </div>
         );
@@ -48,6 +49,12 @@ export default class App extends React.Component {
          task: task,
          isCompleted: false
          });
+        this.setState({todos: this.state.todos});
+    }
+
+    deleteTask(taskToDelete) {
+        console.log('got here: '+ taskToDelete);
+        this.state.todos.remove(todo => todo.task === taskToDelete);
         this.setState({todos: this.state.todos});
     }
 }
