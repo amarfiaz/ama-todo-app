@@ -1,5 +1,4 @@
 import React from 'react';
-import './assets/App.css';
 import TodosList from './components/todos-list';
 import CreateTodo from './components/create-todo';
 
@@ -53,8 +52,7 @@ export default class App extends React.Component {
     }
 
     deleteTask(taskToDelete) {
-        console.log('got here: '+ taskToDelete);
-        this.state.todos.remove(todo => todo.task === taskToDelete);
+        this.state.todo.delete(todo => todo.task === taskToDelete);
         this.setState({todos: this.state.todos});
     }
 }

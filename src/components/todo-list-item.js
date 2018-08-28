@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/App.css';
+import '../assets/todo-list-item.css';
 
 export default class TodosListItem extends React.Component {
 
@@ -29,7 +29,7 @@ export default class TodosListItem extends React.Component {
             return (
                 <td>
                     <button onClick={this.onEditClick.bind(this)}>Edit</button>
-                    <button onClick={this.props.deleteTask.bind(this, this.props.task)}>Delete</button>
+                    <button onClick={this.onDeleteClick.bind(this.props.task)}>Delete</button>
                 </td>
             )
     }
@@ -49,6 +49,11 @@ export default class TodosListItem extends React.Component {
 
     onCancelClick() {
         this.setState({isEditing: false})
+    }
+
+    onDeleteClick(task) {
+        console.log('got to here: ' + task);
+        this.props.delete(task)
     }
 
 }

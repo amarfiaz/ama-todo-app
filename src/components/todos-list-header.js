@@ -1,8 +1,4 @@
 import React from 'react';
-import '../assets/App.css';
-
-
-
 
 export default class TodosListHeader extends React.Component {
     render() {

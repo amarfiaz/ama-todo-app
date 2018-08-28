@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/App.css';
 import TodosListHeader from './todos-list-header';
 import TodosListItem from './todo-list-item';
 

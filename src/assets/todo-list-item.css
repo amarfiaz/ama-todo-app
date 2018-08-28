@@ -1,0 +1,10 @@
+.Task-isCompleted-true {
+    color: red;
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+.Task-isCompleted-false {
+    color: green;
+    cursor: pointer;
+}
