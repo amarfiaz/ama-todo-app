@@ -52,8 +52,9 @@ export default class App extends React.Component {
     }
 
     deleteTask(taskToDelete) {
-        this.state.todo.delete(todo => todo.task === taskToDelete);
-        this.setState({todos: this.state.todos});
+        console.log('task to delete: ' + taskToDelete);
+        const newTodoList = (this.state.todos).filter(item => item.task !== taskToDelete);
+        this.setState({todos: newTodoList});
     }
 }
 

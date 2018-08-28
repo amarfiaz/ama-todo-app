@@ -11,9 +11,9 @@ export default class CreateTodo extends React.Component {
             </form>
         );
     }
+
     handleCreate(event) {
         event.preventDefault();
-        console.log(this.refs.createInput.value);
         if (this.refs.createInput.value !=="") {
             this.props.createTask(this.refs.createInput.value);
             this.refs.createInput.value = '';
