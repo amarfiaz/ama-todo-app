@@ -12,4 +12,4 @@ A simple To Do application in order to learn React
 1. Refactor code. It's currently a little verbose (this was intentional to help me understand the code)
 2. Implement the Edit button so that user can change an item in the to do list
 3. Introduce state management using Redux. Currently i'm handling the state withiin the code and it's starting to get complicated
-4. Convert projec to Typescript to bring into line with how our main project t is being coded
+4. Convert project to Typescript in order to bring it into line with how our main project is being coded
