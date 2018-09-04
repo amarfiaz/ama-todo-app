@@ -6,7 +6,7 @@ export default class CreateTodo extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleCreate.bind(this)}>
-                <input type="text" placeholder="what do i need to do next?" ref="createInput" />
+                <input className="createInput" type="text" placeholder="what do i need to do next?" ref="createInput" />
                 <button className="button">Create</button>
             </form>
         );

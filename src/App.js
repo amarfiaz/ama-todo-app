@@ -18,14 +18,14 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            todos
+            todos: todos
         };
     }
 
     render() {
         return (
             <div>
-                <h1>Ama TODO app</h1>
+                <h1>ama TODO app</h1>
                 <CreateTodo createTask={this.createTask.bind(this)} />
                 <TodosList
                     todos={this.state.todos}

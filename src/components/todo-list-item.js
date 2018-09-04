@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/todo-list-item.css';
+import DateSelector from './date-picker';
 
 export default class TodosListItem extends React.Component {
 
@@ -34,11 +35,22 @@ export default class TodosListItem extends React.Component {
             )
     }
 
+    renderCalenderSection() {
+
+        return (
+            <td>
+                <DateSelector/>
+            </td>
+        )
+    }
+
+
     render() {
         return (
             <tr>
                 {this.renderTasksSection()}
                 {this.renderActionsSection()}
+                {this.renderCalenderSection()}
             </tr>
         );
     }
