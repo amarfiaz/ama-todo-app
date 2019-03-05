@@ -1,24 +1,16 @@
-import React from 'react';
+import React,  { Component } from 'react';
 import TodosList from './components/todos-list';
 import CreateTodo from './components/create-todo';
+import {store} from './store';
 
-let todos = [
-    {
-        task: 'make a react app',
-        isCompleted: false
-    },
-    {
-        task: 'get some rest',
-        isCompleted: true
-    }
-];
 
-export default class App extends React.Component {
+
+class App extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            todos: todos
+            todos: store.getState()
         };
     }
 
@@ -57,4 +49,6 @@ export default class App extends React.Component {
         this.setState({todos: newTodoList});
     }
 }
+export default App;
+
 
