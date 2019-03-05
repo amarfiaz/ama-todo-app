@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component}from 'react';
 import '../assets/create-todo.css';
 
 
-export default class CreateTodo extends React.Component {
+class CreateTodo extends Component {
     render() {
         return (
             <form onSubmit={this.handleCreate.bind(this)}>
@@ -12,12 +12,13 @@ export default class CreateTodo extends React.Component {
         );
     }
 
-    handleCreate(event) {
-        event.preventDefault();
+    handleCreate(e) {
+        e.preventDefault();
         if (this.refs.createInput.value !=="") {
             this.props.createTask(this.refs.createInput.value);
             this.refs.createInput.value = '';
         }
     }
 }
+export default CreateTodo
 
