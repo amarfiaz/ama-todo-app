@@ -2,7 +2,7 @@ import React,  { Component } from 'react';
 import TodosList from './components/todos-list';
 import CreateTodo from './components/create-todo';
 import {store} from './store';
-
+import {taskAction} from './actions';
 
 
 class App extends Component {
@@ -31,7 +31,9 @@ class App extends Component {
     toggleTask(task) {
         const foundTodo = (this.state.todos).find(todo => todo.task === task);
         foundTodo.isCompleted = !foundTodo.isCompleted;
-        this.setState({todos: this.state.todos});
+        store.dispatch(taskAction({todos: this.state.todos}));
+
+        // this.setState({todos: this.state.todos});
     }
 
 

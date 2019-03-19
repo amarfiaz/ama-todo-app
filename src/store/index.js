@@ -1,20 +1,15 @@
-
-
 import { createStore } from "redux";
 import reducer from "../reducers";
 
-
-
-
-const todos = [
-    {
-        task: 'make a react app',
-        isCompleted: false
-    },
+const initialState = [
     {
         task: 'get some rest',
         isCompleted: true
+    },
+    {
+        task: 'do something',
+        isCompleted: false
     }
-];
+    ];
 
-export const store = createStore(reducer, todos);
+export const store = createStore(reducer, initialState);

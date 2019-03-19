@@ -1,16 +1,17 @@
-import {FETCH_STUFF, RECEIVE_STUFF} from '../actions/actionTypes';
+export default(state, action) =>  {
+    console.log(action, 'action');
+    console.log(state, 'state');
 
-export default function stuff(state, action) {
-    let newState;
+
     switch (action.type) {
-        case FETCH_STUFF:
-            console.log('FETCH_STUFF Action');
-            return action;
-        case RECEIVE_STUFF:
-            newState = action.stuff;
-            console.log('RECEIVE_STUFF Action');
-            return newState;
-        default:
-            return state;
+        case 'ama':
+            return {
+                // DO SOMETHING
+            };
+        case 'fiaz':
+            return {
+                // DO SOMETHING
+            };
+        default: return (state);
     }
 }
